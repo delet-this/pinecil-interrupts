@@ -1,0 +1,10 @@
+[target.riscv32imac-unknown-none-elf]
+# linker = "clang"
+rustflags = [
+  "-C", "link-arg=-Tmemory.x",
+  "-C", "link-arg=-Tlink.x",
+  # "-C", "link-arg=-fuse-ld=mold",
+]
+
+[build]
+target = "riscv32imac-unknown-none-elf"
